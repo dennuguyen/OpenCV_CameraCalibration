@@ -27,12 +27,13 @@ int main(int argc, char** argv)
           
 
           if( frame.empty() ) break; // end of video stream
-          cv::imshow("this is you, smile! :)", frame);
+          cv::imshow("this is you, smile! :)", copy);
           if( cv::waitKey(10) == 27 ) break; // stop capturing by pressing ESC 
     }
 
     // the camera will be closed automatically upon exit
     //cap.close();
+    cap.release();
     return 0;
 
 
